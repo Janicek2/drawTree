@@ -1,15 +1,25 @@
 var i;
 var k;
 var j;
+var g;
+var h;
+var star;
+var space;
 
 function drawTree(k) {
     for (i = 0 ; i < k ; i++) {
-        var star = ""
+        star = "*"
+        space = "__"
 
         for (j = 0 ; j < i ; j++ ) {
-            star += "*"
-            
+            star += "**"
+
+            for (h = k - j ; h < i ; h-- ) {
+                space += "_"
+            }
         }
-        console.log (star);
+
+
+        console.log (space + star);
     }
 }
